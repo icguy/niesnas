@@ -2,5 +2,8 @@
   "name": "jquery",
   "version": "0.0.0",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^0.12.3"
+  }
 }
