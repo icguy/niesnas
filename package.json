@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
+    "@types/jquery": "^3.5.1",
     "http-server": "^0.12.3"
   }
 }

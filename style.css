@@ -1,3 +1,17 @@
 h1, h2 {
   font-family: 'Courier New', Courier, monospace;
 }
+
+#outer {
+	width: 400px;
+	height: 400px;
+	overflow: hidden;
+}
+
+#inner {
+	width: 400px;
+	height: 400px;
+	background-image: url("https://pbs.twimg.com/profile_images/977220741920944129/VBNq6vs__400x400.jpg");
+    background-repeat: no-repeat;
+	image-rendering: pixelated;
+}

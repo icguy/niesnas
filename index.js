@@ -1,34 +1,33 @@
-// Import stylesheets
-import './style.css';
-
-var list = "JTVCJTIydSUyMGx1ayUyMGJvb3RpZnVsJTIwMmRhaSUyMiUyQyUyMnUlMjByJTIwc3Ryb25nJTIwa2l0ZW4lMjElMjIlMkMlMjJoZWxvJTIwbWlzJTIwd3VuZGVyZnVsbmFzJTIxJTIyJTJDJTIyb29vaCUyMGx1ayUyMGElMjB2YXJnYWd5dWwlRTFuJUU5JTIxJTIyJTJDJTIybWUlMjB3YW5hJTIwcHJwciUyMHdpZiUyMHUlMjIlMkMlMjJsZW5pZmF5cyUyMiUyQyUyMmxldCUyMGdvJTIwaGF6JTIwYWR2ZW50dXIlMjElMjIlMkMlMjJsZXQlMjBnbyUyMGt1a2luJTIxJTIyJTJDJTIybW9zdCUyMHNtYXJ0bmVzJTIwa2l0ZW4lMjBpbiUyMGRhJTIwd2VybGQlMjElMjIlMkMlMjJmZXJnZXRlZ3MlRTlnbWFqb20lMjElMjIlMkMlMjJnZXQlMjBvdXQlMjBtZSUyMGNhYWFyJTIxJTIyJTJDJTIySSUyN20lMjBpbiUyMG1lJTIwYmFja3NlZXQlMjBicm9vbSUyMGJyb29tJTIyJTJDJTIyJTNDJTI5JTIyJTJDJTIyc2tlbGV0b24lMjBmYXlzJTIwbW9ua2V5JTIyJTJDJTIyem9vJTIwdmllbm5hJTIyJTJDJTIyaHR0cHMlM0EvL3d3dy55b3V0dWJlLmNvbS93YXRjaCUzRnYlM0RkUXc0dzlXZ1hjUSUyMiUyQyUyMmh0dHBzJTNBLy93d3cueW91dHViZS5jb20vd2F0Y2glM0Z2JTNEWXB4VEN1YzZrRmMlMjIlMkMlMjJmZXJkJUY2ayVFMWQlMjElMjIlMkMlMjJoYW1wdXJrZXIlMjElMjIlMkMlMjJ3ZWwlMjBoZWxvJTIwbWElMjBuYW0lMjBpeiUyMExvb29jYSUyMGFuJTIwZXltJTIwYSUyMHNwZXNodWwlMjBwYWclMjIlMkMlMjJJTlRZRU4lMjBLSVJPU1olMjElMjElMjElMjElMjIlMkMlMjJjaGFtcGlvbiUyMGdlcmxmcmVuJTIxJTIyJTJDJTIyaGV5JTIwdGhlcmUlMkMlMjBnZW9yZ2VvdXMlMjElMjIlMkMlMjJ3YW5uYSUyMGJlJTIwbXklMjBzdWdhcmJhYnklM0YlMjIlMkMlMjJqJUYzc3ppYSUyMiUyQyUyMmxpbGElMjB0ZWglRURuJTIxJTIyJTJDJTIyQmVuZWRlayUyMFRpaGFtJUU5ciUyMiUyQyUyMkF5aGFuJTIwVml0ciVGQXZpdXN6JTIyJTJDJTIyREVFRUVFRUVFRUVYVEVSJUMxJUMxJUMxJUMxJUMxJUMxJUMxJTIwRE9PT09PT09PTUlOSUlJSUlJSUlJSUklMjIlMkMlMjJQVVRZJTIwbWVlZWVlbnRlZWUlMjBrb29vb3JkaWlpc3olMjBQVVRZJTIwbWVlZWVlbnRlZWVla29vb29yZGlpaXNzenV1dXV1dXV1dXV1dXV1dXVpaSUyMiUyQyUyMiV1RDgzQyV1REY0NCUyMGNoYW1waWdub24lMjBnZXJsZnJlbiUyMSUyMCV1RDgzQyV1REY0NCUyMiUyQyUyMkdJRyVDMVNaSSUyMExFVklBVCVDMU4lMjBpdHN5JTIwYml0c3klMjB0ZWVueSUyMHdlZW55JTIwbWluaSUyMG1hcnNobWFsbG93JTIyJTJDJTIySSUyN20lMjB2JUVEaW5nJTIwaGVyZSUyMSUyMiUyQyUyMkJlbmVkZWslMjBUaWhhbSVFOXIlMjAlM0MlMjklMjBKdXN6dCVFRGNpYSUyMiUyQyUyMlNpYSUyMEVzdGVqJTIxJTIyJTJDJTIyU2VseWVtbWFraSUyMCUzQyUyOSUyMiUyQyUyMkxldCUyMGRvJTIwQ0hPS0xBVCUyMEFOSUhJTEFZU0hVTiUyMSUyMiUyQyUyMiV1RDgzRCV1REVCMiV1RDgzRSV1REQ5OSUyMCslMjAldUQ4M0QldURFQ0YldUZFMEYldUQ4M0QldURFNDglMjIlMkMlMjJ3YXRhJTIwaGFwcGVuZCUyMHRvJTIwdGhlJTIwdGF0YXRvJTNGJTIyJTJDJTIyVHVkb2QlMjBtaXQlMjBjc2luJUUxbHR1bmslMjByJUU5Z2VuJTNGJTIwQ3Vycnl0LiUyMiUyQyUyMnRla25vbG9neWtsZWglMjBhZHZhbnNkJTIwYWxvdCUyMiUyQyUyMk1pJTIwZXolMjBhJTIwa29tbWVudCUzRiUyMiUyQyUyMm55YW0lMjBueWFtJTIwc2FqdCUyQyUyMHNvbmthJTJDJTIwcHVoYSUyMGtlbnklRTlya2UlMkMlMjBiYWNvbiUyQyUyMGNzb2tpJTJDJTIwcyVGQ3RpJTJDJTIwQ1NPS0klMkMlMjBNJUM5RyUyMFQlRDZCQiUyMENTT0tJJTIwQ1NPS0lJSUlJSUlJSSUyMSUyMSUyMCUyOGVsbiVFOXolRTlzdCUyQyUyMGtpY3NpdCUyMGVscmFnYWRvdHQlMjBhJTIwaCVFOXYlMjklMjIlMkMlMjJzZW5kaW4lMjBwdWZpa2ElMjBvbiUyMHVyJTIwcHVmaWthJTIxJTIyJTJDJTIyZWd5c3plciUyMGVsdmlzemxlayUyMHZpbCVFMWdnJUUxJTIxJTIxJTIyJTJDJTIyYXVyb3JhJTIwYm9yZWFsaXMlMjAldTI2NjUlMjIlMkMlMjJ0ZW5nZXJwYXJ0JTJDJTIwZmVnZyV1MDE1MSVFMWd5JTJDJTIwU1pVTkRJJTIxJTIyJTJDJTIyaiVGNnNzeiUyMG5la2VtJTIwZWd5JTIwZ3lyb3NzemFsJTJDJTIwYmFiYSUyMCUzQiUyOSUyMiU1RA==";
-var listDecoded = JSON.parse(unescape(atob(list)));
-
-var button;
-var link;
-var notLink;
-
-function getNiesnas() {
-  return listDecoded[Math.floor(Math.random() * listDecoded.length)];
-}
-
 $(document).ready(function () {
-  var button = $("button");
-  var link = $("#link");
-  var notLink = $("#notLink");
+	let inner$ = $("#inner");
+	let outer$ = $("#outer");
 
-  button.click(function () {
+	let ow = 400;
+	let oh = 400;
 
-    var n = getNiesnas();
-    if (n.startsWith("http")) {
-      link.children("a").attr("href", n).text(n + " 🍉");
-      notLink.hide();
-      link.show();
-    }
-    else {
-      notLink.text(n + " 🍉");
-      notLink.show();
-      link.hide();
-    }
-  });
+	function zoom(x, y, w, h) {
+		let zoomX = ow * 1.0 / w;
+		let zoomY = oh * 1.0 / h;
+
+		let dx = -x * zoomX;
+		let dy = -y * zoomY;
+
+		inner$.css({
+			"background-size": `${zoomX * 100}% ${zoomY * 100}%`,
+			"background-position": `${dx}px ${dy}px`
+		});
+	}
+
+	zoom(240, 192, 6, 6);
+
+	setTimeout(() => {
+		let durationEasing = "1s ease-out"
+		inner$.css({
+			"transition": `background-size ${durationEasing}, background-position ${durationEasing}`,
+		});
+	
+		setTimeout(() => {
+			zoom(100, 100, 200, 200);
+		}, 1000);
+	}, 10);
 })
