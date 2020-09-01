@@ -1,10 +1,13 @@
 {
-  "name": "jquery",
-  "version": "0.0.0",
-  "private": true,
-  "dependencies": {},
-  "devDependencies": {
-    "@types/jquery": "^3.5.1",
-    "http-server": "^0.12.3"
-  }
+	"name": "jquery",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"start": "http-server -o"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"@types/jquery": "^3.5.1",
+		"http-server": "^0.12.3"
+	}
 }

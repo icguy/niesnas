@@ -21,7 +21,7 @@ $(document).ready(function () {
 	zoom(240, 192, 6, 6);
 
 	setTimeout(() => {
-		let durationEasing = "1s ease-out"
+		let durationEasing = "2s ease-out"
 		inner$.css({
 			"transition": `background-size ${durationEasing}, background-position ${durationEasing}`,
 		});
