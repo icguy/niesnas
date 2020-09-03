@@ -44,6 +44,7 @@ body {
 	height: 1280;
 	display: none;
 	transition: opacity 2s ease;
+	background-repeat: no-repeat;
 }
 
 .image {
@@ -62,9 +63,10 @@ body {
 	z-index: 15;
 }
 
-#sol {
+#sapphire {
 	background-image: url("sapphire.png");
 	z-index: 0;
+	background-size: contain;
 }
 
 #solblur {

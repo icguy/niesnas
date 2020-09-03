@@ -90,7 +90,7 @@ $(document).ready(function () {
 			$main.children().hide();
 			$text.show();
 			$text.text("MaMa, aZ Én SzEmEm Is OlYaN fÉnYeSeN cSiLlOg, MiNt A SzAfÍr™?");
-			$images.show();
+			$images.show().children().hide();
 			$sapphire.show();
 		}
 	}
@@ -106,7 +106,7 @@ $(document).ready(function () {
 		"Ez valami új?",
 		"Piszony!",
 		"Készültem egy pindurka meglepetéssel!",
-		"De előtte",
+		"De előtte...",
 		"Elárulok egy titokt!",
 		createRidolStep("Emlékszel erre?"),
 		createRidolStep("Ez egy részlet egy képből!"),
