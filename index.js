@@ -91,12 +91,15 @@ $(document).ready(function () {
 			});
 			setTimeout(() => {
 
-				// let zoom = 1;
-				let zoom = globalZoom;
-				let w = 1985 * zoom;
-				let h = 2394 * zoom;
-				let x = 216 * globalZoom - zoom * 806
-				let y = 299 * globalZoom - zoom * 1505
+				let cw = 720.0 * globalZoom;
+				let ch = 1280.0 * globalZoom;
+				let w = 1985;
+				let h = 2394;
+				let zoom = Math.min(cw / w, ch / h);
+				w *= zoom;
+				h *= zoom;
+				let x = 0
+				let y = 0
 				$solblur.css({
 					"background-size": `${w}px ${h}px`,
 					"background-position": `${x}px ${y}px`,
@@ -116,17 +119,17 @@ $(document).ready(function () {
 	}
 
 	let steps = [
-		// "wata happend to the tatato? 🍉",
-		// "wel helo ma nam iz Loooca an eym a speshul pag 🍉",
-		// "nyam nyam sajt, sonka, puha kenyérke, bacon, csoki, süti, CSOKI, MÉG TÖBB CSOKI CSOKIIIIIIIII!! (elnézést, kicsit elragadott a hév) 🍉",
-		// "tengerpart, feggőágy, SZUNDI! 🍉",
-		// "tengerpart, feggőágy, SZUNDI! 🍉",
-		// "oooh luk a vargagyuláné! 🍉",
-		// "Hopá!",
-		// "Ez valami új?",
-		// "Piszony!",
-		// "Készültem egy pindurka meglepetéssel!",
-		// "De előtte...",
+		"wata happend to the tatato? 🍉",
+		"wel helo ma nam iz Loooca an eym a speshul pag 🍉",
+		"nyam nyam sajt, sonka, puha kenyérke, bacon, csoki, süti, CSOKI, MÉG TÖBB CSOKI CSOKIIIIIIIII!! (elnézést, kicsit elragadott a hév) 🍉",
+		"tengerpart, feggőágy, SZUNDI! 🍉",
+		"tengerpart, feggőágy, SZUNDI! 🍉",
+		"oooh luk a vargagyuláné! 🍉",
+		"Hopá!",
+		"Ez valami új?",
+		"Piszony!",
+		"Készültem egy pindurka meglepetéssel!",
+		"De előtte...",
 		"Elárulok egy titokt!",
 		createRidolStep("Emlékszel erre?"),
 		createRidolStep("Ez egy részlet egy képből!"),
