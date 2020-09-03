@@ -30,7 +30,7 @@ $(document).ready(function () {
 			$images.show();
 			$ridol.show();
 			$sol.show();
-			$solblur.show();
+			// $solblur.show();
 		}
 	}
 
@@ -42,7 +42,7 @@ $(document).ready(function () {
 			$images.show();
 			$ridol.show();
 			$sol.show();
-			$solblur.show();
+			// $solblur.show();
 			$ridol.css({
 				"opacity": 0
 			})
@@ -112,17 +112,17 @@ $(document).ready(function () {
 	}
 
 	let steps = [
-		"wata happend to the tatato? 🍉",
-		"wel helo ma nam iz Loooca an eym a speshul pag 🍉",
-		"nyam nyam sajt, sonka, puha kenyérke, bacon, csoki, süti, CSOKI, MÉG TÖBB CSOKI CSOKIIIIIIIII!! (elnézést, kicsit elragadott a hév) 🍉",
-		"tengerpart, feggőágy, SZUNDI! 🍉",
-		"tengerpart, feggőágy, SZUNDI! 🍉",
-		"oooh luk a vargagyuláné! 🍉",
-		"Hopá!",
-		"Ez valami új?",
-		"Piszony!",
-		"Készültem egy pindurka meglepetéssel!",
-		"De előtte...",
+		// "wata happend to the tatato? 🍉",
+		// "wel helo ma nam iz Loooca an eym a speshul pag 🍉",
+		// "nyam nyam sajt, sonka, puha kenyérke, bacon, csoki, süti, CSOKI, MÉG TÖBB CSOKI CSOKIIIIIIIII!! (elnézést, kicsit elragadott a hév) 🍉",
+		// "tengerpart, feggőágy, SZUNDI! 🍉",
+		// "tengerpart, feggőágy, SZUNDI! 🍉",
+		// "oooh luk a vargagyuláné! 🍉",
+		// "Hopá!",
+		// "Ez valami új?",
+		// "Piszony!",
+		// "Készültem egy pindurka meglepetéssel!",
+		// "De előtte...",
 		"Elárulok egy titokt!",
 		createRidolStep("Emlékszel erre?"),
 		createRidolStep("Ez egy részlet egy képből!"),
