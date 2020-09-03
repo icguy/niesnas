@@ -43,9 +43,11 @@ $(document).ready(function () {
 			$ridol.show();
 			$sol.show();
 			// $solblur.show();
-			$ridol.css({
-				"opacity": 0
-			})
+			setTimeout(() => {
+				$ridol.css({
+					"opacity": 0
+				});
+			}, 100);
 		}
 	}
 
@@ -64,9 +66,9 @@ $(document).ready(function () {
 			let h = 2394 * zoom;
 			let x = 216 * globalZoom - zoom * 806
 			let y = 299 * globalZoom - zoom * 1505
-			$sol.css({
-				"opacity": 0
-			});
+			// $sol.css({
+			// 	"opacity": 0
+			// });
 			$solblur.css({
 				"background-size": `${w}px ${h}px`,
 				"background-position": `${x}px ${y}px`,
@@ -80,23 +82,25 @@ $(document).ready(function () {
 			$text.show();
 			$text.text(text);
 			$images.show();
+			$images.children().hide()
 			$solblur.show();
 
-			let zoom = 0.5;
-			let w = 1985 * zoom * globalZoom;
-			let h = 2394 * zoom * globalZoom;
-			$sol.css({
-				"opacity": 0
-			});
 			let durationEasing = "2s ease";
 			$solblur.css({
 				"transition": `background-size ${durationEasing}, background-position ${durationEasing}`
 			});
 			setTimeout(() => {
+
+				// let zoom = 1;
+				let zoom = globalZoom;
+				let w = 1985 * zoom;
+				let h = 2394 * zoom;
+				let x = 216 * globalZoom - zoom * 806
+				let y = 299 * globalZoom - zoom * 1505
 				$solblur.css({
 					"background-size": `${w}px ${h}px`,
-					"background-position": `-87px -153.5px`,
-				})
+					"background-position": `${x}px ${y}px`,
+				});
 			}, 100);
 		}
 	}
