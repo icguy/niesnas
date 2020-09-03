@@ -62,8 +62,8 @@ $(document).ready(function () {
 			let zoom = 456.0 / 7 * globalZoom;
 			let w = 1985 * zoom;
 			let h = 2394 * zoom;
-			let x = 216  * globalZoom - zoom * 806
-			let y = 299  * globalZoom - zoom * 1505
+			let x = 216 * globalZoom - zoom * 806
+			let y = 299 * globalZoom - zoom * 1505
 			$sol.css({
 				"opacity": 0
 			});
@@ -90,10 +90,14 @@ $(document).ready(function () {
 			});
 			let durationEasing = "2s ease";
 			$solblur.css({
-				"transition": `background-size ${durationEasing}, background-position ${durationEasing}`,
-				"background-size": `${w}px ${h}px`,
-				"background-position": `-87px -153.5px`,
-			})
+				"transition": `background-size ${durationEasing}, background-position ${durationEasing}`
+			});
+			setTimeout(() => {
+				$solblur.css({
+					"background-size": `${w}px ${h}px`,
+					"background-position": `-87px -153.5px`,
+				})
+			}, 100);
 		}
 	}
 
@@ -108,28 +112,28 @@ $(document).ready(function () {
 	}
 
 	let steps = [
-		// "wata happend to the tatato? 🍉",
-		// "wel helo ma nam iz Loooca an eym a speshul pag 🍉",
-		// "nyam nyam sajt, sonka, puha kenyérke, bacon, csoki, süti, CSOKI, MÉG TÖBB CSOKI CSOKIIIIIIIII!! (elnézést, kicsit elragadott a hév) 🍉",
-		// "tengerpart, feggőágy, SZUNDI! 🍉",
-		// "tengerpart, feggőágy, SZUNDI! 🍉",
-		// "oooh luk a vargagyuláné! 🍉",
-		// "Hopá!",
-		// "Ez valami új?",
-		// "Piszony!",
-		// "Készültem egy pindurka meglepetéssel!",
-		// "De előtte...",
-		// "Elárulok egy titokt!",
-		// createRidolStep("Emlékszel erre?"),
-		// createRidolStep("Ez egy részlet egy képből!"),
-		// createSolStep("Ez egy részlet egy képből!"),
-		// createSolStep("Hogy mit ábrázol a kép?"),
-		// "Egy titkot™!",
-		// ":O",
-		// "Egy olyan titkot™ aminek én nagyon örültem.",
-		// "Annyira, hogy nem tudtam egy kicsit nem elmondani.",
-		// "Ezért csináltam belőle egy ridolt™! Amit ugyan nem lehetett megfejteni, de egy kicsit elújságoztam neked a titkot™!",
-		// "Most viszont meg is mutatom a megfejtést™!",
+		"wata happend to the tatato? 🍉",
+		"wel helo ma nam iz Loooca an eym a speshul pag 🍉",
+		"nyam nyam sajt, sonka, puha kenyérke, bacon, csoki, süti, CSOKI, MÉG TÖBB CSOKI CSOKIIIIIIIII!! (elnézést, kicsit elragadott a hév) 🍉",
+		"tengerpart, feggőágy, SZUNDI! 🍉",
+		"tengerpart, feggőágy, SZUNDI! 🍉",
+		"oooh luk a vargagyuláné! 🍉",
+		"Hopá!",
+		"Ez valami új?",
+		"Piszony!",
+		"Készültem egy pindurka meglepetéssel!",
+		"De előtte...",
+		"Elárulok egy titokt!",
+		createRidolStep("Emlékszel erre?"),
+		createRidolStep("Ez egy részlet egy képből!"),
+		createSolStep("Ez egy részlet egy képből!"),
+		createSolStep("Hogy mit ábrázol a kép?"),
+		"Egy titkot™!",
+		":O",
+		"Egy olyan titkot™ aminek én nagyon örültem.",
+		"Annyira, hogy nem tudtam egy kicsit nem elmondani.",
+		"Ezért csináltam belőle egy ridolt™! Amit ugyan nem lehetett megfejteni, de egy kicsit elújságoztam neked a titkot™!",
+		"Most viszont meg is mutatom a megfejtést™!",
 		createSolStep("Redeh?"),
 		createSolBlurStep("Luk!"),
 		createFinalStep("Dis!"),
