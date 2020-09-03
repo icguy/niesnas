@@ -1,17 +1,75 @@
-h1, h2 {
-  font-family: 'Courier New', Courier, monospace;
+h1,
+h2 {
+	font-family: 'Courier New', Courier, monospace;
 }
 
-#outer {
-	width: 400px;
-	height: 400px;
+body,
+html {
+	height: 100%;
+	margin: 0;
 	overflow: hidden;
+	width: 100%;
 }
 
-#inner {
-	width: 400px;
-	height: 400px;
-	background-image: url("https://pbs.twimg.com/profile_images/977220741920944129/VBNq6vs__400x400.jpg");
-    background-repeat: no-repeat;
+html {
+	padding: 0;
+}
+
+body {
+	box-sizing: border-box;
+	display: grid;
+	grid-auto-rows: auto 1fr;
+	padding: 20px;
+}
+
+#main {
+	height: 100%;
+	width: 100%;
+}
+
+#main * {
+	display: none;
+}
+
+#getButton {
+	margin-bottom: 20px;
+}
+
+#text {
+	margin-bottom: 20px;
+}
+
+#images > * {
+	width: 720;
+	height: 1280;
+	display: none;
+	transition: opacity 2s ease;
+}
+
+.image {
+	width: 720;
+	height: 1280;
+	position: absolute;
+}
+
+#ridol {
+	background-image: url("ridol2.png");
+	z-index: 20;
+}
+
+#sol {
+	background-image: url("sol.png");
+	z-index: 15;
+}
+
+#sol {
+	background-image: url("sapphire.png");
+	z-index: 0;
+}
+
+#solblur {
+	background-image: url("full.jpg");
+	z-index: 10;
 	image-rendering: pixelated;
+	background-repeat: no-repeat;
 }
