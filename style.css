@@ -25,10 +25,8 @@ body {
 #main {
 	height: 100%;
 	width: 100%;
-}
-
-#main * {
-	display: none;
+    display: grid;
+    grid-auto-rows: auto 1fr;
 }
 
 #getButton {
@@ -39,17 +37,16 @@ body {
 	margin-bottom: 20px;
 }
 
+#images {
+	display: none;
+}
+
 #images > * {
 	width: 720;
 	height: 1280;
 	display: none;
 	transition: opacity 2s ease;
 	background-repeat: no-repeat;
-}
-
-.image {
-	width: 720;
-	height: 1280;
 	position: absolute;
 }
 
@@ -74,4 +71,7 @@ body {
 	z-index: 10;
 	image-rendering: pixelated;
 	background-repeat: no-repeat;
+}
+
+#testdiv {
 }
